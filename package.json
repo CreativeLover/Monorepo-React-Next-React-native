@@ -1,0 +1,21 @@
+{
+  "name": "monorepo-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**"
+    ]
+  },
+  "scripts": {
+    "android:start": "yarn workspace mobile android",
+    "ios:start": "yarn workspace mobile ios",
+    "web:start": "yarn workspace web start"
+  }
+}
